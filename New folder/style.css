@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins",sans-serif;
+    background: white;
+    
+}
+
+
+
+/* Navigation*/
+nav{
+    position: relative;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px 10%;
+    align-items: center;
+  
+}
+nav img{
+    width : 80px;
+    cursor: pointer;
+    border-radius: 100%;
+
+}
+nav img:hover{
+        animation:animate 1s infinite;
+
+}
+@keyframes animate{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+nav .navigation ul {
+    display: flex;
+    justify-content:flex-end ;
+    align-items: center;
+}
+nav .navigation ul li {
+list-style: none;
+margin-left: 30px;
+
+}
+nav .navigation ul li a {
+    text-decoration: none;
+    color:#89CFF0;
+    font-size:22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-weight: 900;
+    transition: 0.5,ease;
+}
+nav .navigation ul li a:hover{
+    color: gold;
+
+}
+#home{
+    background-image:url("images/bg.jpg");
+   overflow-x: hidden;
+   image-resolution: from-image 300dpi;
+   width:100%;
+   height: 100vh;
+   display: flex;
+   background-size: contain;
+   background-position: center ;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 150px;
+   background-repeat: no-repeat;
+}
+
+
+
+
+
+#home .btn{
+    margin-top: 30px;
+}
+#home h1{
+    color:black;
+    font-family: Georgia;
+    font-size:30px;
+
+}
+
+#home h2{
+    color:black;
+    font-family: Georgia;
+    font-size:50px;
+    transition-delay:30s;
+
+}
+#home h3{
+    color:black;
+    font-family: Georgia;
+    font-size:35px;
+
+
+
+}
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    .card {
+        flex: 1 1 calc(100% - 20px);
+    }
+    #home h1 {
+        color:blue;
+        font-family: Georgia,sans-serif;
+        font-size:20px;
+        font-weight:900;
+    
+    }
+    #home h2{
+        color:blue;
+        font-family: Georgia,sans-serif;
+        font-size:25px;
+        font-weight:900;
+    
+    }
+    #home h3{
+        color:blue;
+        font-family: Georgia,sans-serif;
+        font-size:15px;
+        font-weight:900;
+    
+    
+    
+    }
+    nav .navigation ul li {
+        list-style: none;
+        margin-left: 15px;
+        
+        }
+    nav .navigation ul li a {
+        text-decoration: none;
+        color:#89CFF0;
+        font-size:12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+        font-weight: 800;
+        transition: 0.5,ease;
+    }
+}
+
+
+#home a{
+text-decoration: none;
+font-size:20px;
+padding:40px,100px;
+background-color: #fff;
+font-weight: 700;
+border-radius: 5px;
+
+}
+#meet{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    padding:  0 10%;
+    background-image:url("images/proprietress.jpg") ;
+    background-size: cover;
+    background-position:center ;
+}
+.content{
+    max-width:600px;
+}
+
+.content h1{
+    font-size: 50px;
+    font-weight: 400;
+    color:white;
+    background-color:#000;
+}
+.content h3{
+    font: size 32px;
+    font-weight: 300;
+    color:white;
+    background-color: #000;
+}
+        
+.content p {
+    font-size:14px;
+    color:white;
+    font-weight: 300;
+    background-color: #000;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    #meet{
+        height:140vh;
+        display: flex;
+        align-items: center;
+        margin-top: 90px;
+        padding:  0 10%;
+        background-image:url("images/proprietress.jpg") ;
+        background-size: cover;
+        background-position:center ;
+    }
+    .content h1{
+        font-size: 30px;
+        font-weight: 400;
+        color:white;
+    background-color: #000;
+    visibility: hidden;
+    }
+    .content h3{
+        margin-top:200px;
+        font: size 12px;
+        font-weight: 400;
+        color:white;
+    background-color: #000;
+    visibility:hidden;
+    }
+            
+    .content p {
+        font-size:12px;
+        color:white;
+        font-weight: 600;
+        background-color: #000
+    }
+}
+    
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 0 1 calc(25% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card-content {
+    padding: 20px;
+    font-family:"Georgia", sans-serif;
+}
+
+.card-content h2 {
+    margin-top: 0;
+
+}
+
+.card-content p {
+    margin: 10px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        flex: 1 1 calc(100% - 20px);
+    }
+}
+
+.card:hover{
+    background: #89CFF0;
+    color:#fff;
+}
+#Programs {
+    font-family:Georgia;
+    font-size:20px;
+    align-items: center;
+    justify-content: center;
+    display:  flex;
+    text-decoration: dotted;
+    margin-top: 20px;
+    color:babyblue;
+}
+
+/* Add these styles to your existing CSS file */
+.gallery {
+    background-image: url("images/camera.jpeg") ;
+    height:auto;
+    width:100%;
+}
+#meet2{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding:  0 10%;
+    background-image: url("images/note.jpeg") ;
+    background-size: cover;
+    background-position:center ;
+}
+.content2{
+    max-width:600px;
+}
+
+.content2 h1{
+    font-size: 50px;
+    font-weight: 800;
+    color:white;
+    background-color: black;
+}
+.content2 h3{
+    font: size 32px;
+    font-weight: 800;
+    color:blue;
+}
+        
+.content2 p {
+    background-color:black;
+    font-size:18px;
+    color:white;
+    font-weight:400;
+}
+.content2 .button-box{
+    display: flex;
+    justify-content: space-between;
+    width:345px;
+    height: 45px;
+    background: transparent;
+
+}
+/* Add these styles to your existing CSS file */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width:100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-slide img  {
+    max-width: 100%;
+    height: 80vh;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.contact-card {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.contact-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.content {
+    padding: 50px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+
